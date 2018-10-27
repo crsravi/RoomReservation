@@ -1,0 +1,81 @@
+<div class="container">
+  <div style="text-align:center">
+    <h1>
+      Room Reservation!
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-lg-4">
+        <form>
+          <div class="form-group">
+            <label for="fromDate">From Time:</label>
+            <div class="input-group">
+              <input class="form-control"
+                     a2e-datetimepicker
+                     [(ngModel)]="temp.fromDate"
+                     [options]="temp.options" name="fromDate" id="fromDate"/>
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="toDate">To Time:</label>
+            <div class="input-group">
+              <input class="form-control"
+                     a2e-datetimepicker
+                     [(ngModel)]="temp.toDate"
+                     [options]="temp.options" name="toDate" id="toDate"/>
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="roomAmenities">Room Amenities</label>
+            <input type="text" class="form-control" id="roomAmenities" name="roomAmenities" [(ngModel)]="request.amenities">
+          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" name="location" [(ngModel)]="request.location">
+          </div>
+          <button type="button" class="btn btn-success" (click)="get_avail_rooms()">Get Rooms</button>
+        </form>
+      </div>
+  </div>
+  <h3 *ngIf="temp.roomList">Results:</h3>
+
+  <div class="flex-row row">
+    <div class="col-xs-6 col-sm-4 col-lg-3" *ngFor="let room of temp.roomList">
+      <div class="thumbnail">
+        <h3>&nbsp;&nbsp;{{room.name}}</h3>
+        <h6>{{room.description}}</h6>
+        <p><i class="fa fa-location-arrow"> </i>&nbsp;&nbsp;{{room.location}}</p>
+        <p><i class="fa fa-users"> </i>&nbsp;&nbsp;Sits:{{room.capacity}}</p>
+        <p><i class="fa fa-bars"> </i>&nbsp;&nbsp;{{room.amenities}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-success" (click)="getAllReservations()">Get Reservations</button>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">From Time</th>
+        <th scope="col">To Time</th>
+        <th scope="col">Room</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let rese of temp.reservationList">
+        <td>{{rese.id}}</td>
+        <td>{{rese.fromTimeStamp}}</td>
+        <td>{{rese.toTimeStamp}}</td>
+        <td>{{rese.roomId}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

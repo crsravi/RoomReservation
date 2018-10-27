@@ -1,0 +1,10 @@
+/Users/LIMBO/Documents/workspace/ng2boot/backend/src/main/java/com/crs/reservation/dao/ReservationRepository.java
+/Users/LIMBO/Documents/workspace/ng2boot/backend/src/main/java/com/crs/reservation/dto/ReservationDto.java
+/Users/LIMBO/Documents/workspace/ng2boot/backend/src/main/java/com/crs/reservation/dao/RoomRepository.java
+/Users/LIMBO/Documents/workspace/ng2boot/backend/src/main/java/com/crs/reservation/entity/Room.java
+/Users/LIMBO/Documents/workspace/ng2boot/backend/src/main/java/com/crs/reservation/dto/ReservationRequestDto.java
+/Users/LIMBO/Documents/workspace/ng2boot/backend/src/main/java/com/crs/reservation/app/RoomReservationApplication.java
+/Users/LIMBO/Documents/workspace/ng2boot/backend/src/main/java/com/crs/reservation/dto/RoomDto.java
+/Users/LIMBO/Documents/workspace/ng2boot/backend/src/main/java/com/crs/reservation/controllers/rest/RoomReservationController.java
+/Users/LIMBO/Documents/workspace/ng2boot/backend/src/main/java/com/crs/reservation/entity/Reservation.java
+/Users/LIMBO/Documents/workspace/ng2boot/backend/src/main/java/com/crs/reservation/service/RoomReservationService.java
