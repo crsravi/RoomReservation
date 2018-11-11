@@ -1,10 +1,11 @@
-com/crs/reservation/dto/ReservationDto.class
-com/crs/reservation/controllers/rest/RoomReservationController.class
 com/crs/reservation/dto/RoomDto.class
 com/crs/reservation/dao/ReservationRepository.class
-com/crs/reservation/entity/Room.class
-com/crs/reservation/entity/Reservation.class
 com/crs/reservation/app/RoomReservationApplication.class
 com/crs/reservation/dao/RoomRepository.class
-com/crs/reservation/dto/ReservationRequestDto.class
 com/crs/reservation/service/RoomReservationService.class
+com/crs/reservation/dto/ReservationDto.class
+com/crs/reservation/controllers/rest/RoomReservationController.class
+com/crs/reservation/entity/Room.class
+com/crs/reservation/entity/Reservation.class
+com/crs/reservation/config/SecurityConfiguration.class
+com/crs/reservation/dto/ReservationRequestDto.class

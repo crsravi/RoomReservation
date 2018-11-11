@@ -6,6 +6,7 @@ import com.crs.reservation.dto.ReservationRequestDto;
 import com.crs.reservation.dto.RoomDto;
 import com.crs.reservation.service.RoomReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,6 +27,7 @@ public class RoomReservationController {
         return roomReservationService.getRoomsAvailable(null);
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN')")
     @GetMapping("/")
     public List<ReservationDto> reservations(){
         return roomReservationService.getReservations();
