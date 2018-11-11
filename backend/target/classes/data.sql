@@ -15,3 +15,21 @@ values(1,parsedatetime('22-10-2018 14:00:00.000 EDT', 'dd-MM-yyyy hh:mm:ss.SS z'
 
 insert into Reservation (id,from_Time_Stamp,to_Time_Stamp,room_id)
 values(2,parsedatetime('22-10-2018 08:00:00.000 EDT', 'dd-MM-yyyy hh:mm:ss.SS z'),parsedatetime('22-10-2018 09:00:00.000 EDT', 'dd-MM-yyyy hh:mm:ss.SS z'),2);
+
+insert into user(user_id,user_name,first_name,last_name,email,password)
+values(1,'ravi','ravi','cha','ravi@cmail.com','pass');
+
+insert into user(user_id,user_name,first_name,last_name,email,password)
+values(2,'admin','admin','admin','admin@cmail.com','admin');
+
+insert into role(role_id,role)
+values(1,'USER');
+
+insert into role(role_id,role)
+values(2,'ADMIN');
+
+insert into user_role(user_id,role_id)
+values(1,1);
+
+insert into user_role(user_id,role_id)
+values(2,2);
